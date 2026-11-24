@@ -1,0 +1,256 @@
+{
+  "info": {
+    "_postman_id": "59e10d1a-e34d-455e-b999-be36a8a5ba50",
+    "name": "SwagLab Project API",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58697274",
+    "_collection_link": "https://go.postman.co/collection/58697274-59e10d1a-e34d-455e-b999-be36a8a5ba50?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get List User",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://reqres.in/api/users",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "users"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Single user",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {\n    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\n});\n"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "postman-echo.com/post",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "post"
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "User Not Found",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Found",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create User",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Put Update",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Patch Update",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"renuwalde1@gmail.coom\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://reqres.in/api/users/2",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "users",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete user",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delayed Responce",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get List Resources",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET List Resources",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET resources not Found",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST Login success",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST Registor Success",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST no Password",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST No pass login",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ]
+}
